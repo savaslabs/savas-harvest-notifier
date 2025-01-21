@@ -87,7 +87,7 @@ module HarvestNotifier
 
       def users_list
         round_hours(assigns[:users])
-          .map { |u| u[:slack_id].present? ? format(SLACK_ID_ITEM, u) : format(FULL_NAME_ITEM, u) }
+          .map { |u| u[:slack_id].empty? ? format(FULL_NAME_ITEM, u) : format(SLACK_ID_ITEM, u) }
           .join("\n")
       end
 
