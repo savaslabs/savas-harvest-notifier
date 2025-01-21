@@ -65,14 +65,14 @@ module HarvestNotifier
                   end
                 end
 
-                json.child! do
-                  json.type "button"
-                  json.text do
-                    json.type "plain_text"
-                    json.text ":repeat: Refresh"
-                  end
-                  json.value refresh_value
-                end
+                # json.child! do
+                #   json.type "button"
+                #   json.text do
+                #     json.type "plain_text"
+                #     json.text ":repeat: Refresh"
+                #   end
+                #   json.value refresh_value
+                # end
               end
             end
           end
