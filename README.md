@@ -108,7 +108,6 @@ Merging to `master` deploys to https://savas-harvest-notifier-acfd597f5adb.herok
 
 ## @todo:
 
-- [ ] Weekly report is not returing the correct hours so it has not been configured.
 - [ ] Contractors are currenlty filtered out in `lib/harvest_notifier/report.rb`.
 
 ## Credits
