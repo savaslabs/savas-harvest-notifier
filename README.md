@@ -1,11 +1,8 @@
 # Slack Reminder
 
-[![Build Status](https://flatstack.semaphoreci.com/badges/harvest-notifier.svg)](https://flatstack.semaphoreci.com/projects/harvest-notifier)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/fs/harvest-notifier)
-
 Slack Reminder is an integration between Harvest and Slack which automatically reminds users who forget to mark their working hours in Harvest.
 
-This is a Ruby 2.6.5 library for installation on Daily Heroku Scheduler.
+This was a Ruby 2.6.5 library for installation on Daily Heroku Scheduler. It was hastily updated to Ruby 3.4.1 so it works with Heroku24.
 Notification is determined from Harvest API V2.
 
 ## Features
@@ -19,7 +16,7 @@ There are 2 types of reports: Daily and Weekly.
 This integration allows to:
 
 - mention users in the Slack
-- refresh report result
+- refresh report result (button disabled, not yet working.)
 - quickly report the working hours from the link
 - set up custom report schedule
 - configure a whitelist which consists of users, who don't need to be notified in Slack
