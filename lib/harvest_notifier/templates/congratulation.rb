@@ -5,7 +5,7 @@ require "harvest_notifier/templates/base"
 module HarvestNotifier
   module Templates
     class Congratulation < Base
-      CONGRATS_TEXT = "Hooray, everyone reported the working hours for *%<period>s*! :tada:"
+      CONGRATS_TEXT = "Hooray, everyone logged their time for *%<period>s*! :tada:"
 
       def generate # rubocop:disable Metrics/MethodLength
         Jbuilder.encode do |json|
@@ -27,9 +27,9 @@ module HarvestNotifier
 
       def formatted_date
         if assigns[:date]
-          assigns[:date].strftime("%B%eth")
+          assigns[:date].strftime("%A, %B %d")
         else
-          "#{assigns[:date_from].strftime('%d %b')} - #{assigns[:date_to].strftime('%d %b %Y')}"
+          "#{assigns[:date_from].strftime('%A, %B %d')} - #{assigns[:date_to].strftime('%A, %B %d %Y')}"
         end
       end
     end

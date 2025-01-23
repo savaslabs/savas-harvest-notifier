@@ -5,9 +5,9 @@ require "harvest_notifier/templates/base"
 module HarvestNotifier
   module Templates
     class WeeklyReport < Base
-      REMINDER_TEXT = "*Guys, don't forget to report the working hours in Harvest every day.*"
-      USERS_LIST_TEXT = "Here is a list of people who didn't report the working hours for the last week: *%<period>s*"
-      REPORT_NOTICE_TEXT = "_Please, report time and react with :heavy_check_mark: for this message._"
+      REMINDER_TEXT = "*Don't forget to log your hours in Harvest every day. It is crucial for our business.*"
+      USERS_LIST_TEXT = "Here is a list of people who are missing hours for last week: *%<period>s*"
+      REPORT_NOTICE_TEXT = "_Log your time now and react with_ :white_check_mark:"
       SLACK_ID_ITEM = "• <@%<slack_id>s>: *%<missing_hours>s* hours missing of %<weekly_capacity>s"
       FULL_NAME_ITEM = "• %<full_name>s: *%<missing_hours>s* hours missing of %<weekly_capacity>s"
 
@@ -61,7 +61,7 @@ module HarvestNotifier
                   json.style "primary"
                   json.text do
                     json.type "plain_text"
-                    json.text "Report Time"
+                    json.text "Log Time"
                   end
                 end
 
